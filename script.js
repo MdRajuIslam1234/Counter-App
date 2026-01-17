@@ -15,25 +15,18 @@ function increment(){
  num++;
  display.innerText = num;
  parent.style.backgroundColor = randomColor();
- decrease.style.backgroundColor = "whitesmoke"
- display.style.backgroundColor = "whitesmoke"
 }
 
 function decrement(){
   num--;
   display.innerText = num;
   parent.style.backgroundColor = randomColor();
- increase.style.backgroundColor = "whitesmoke"
- display.style.backgroundColor = "whitesmoke"
 }
 
 function resets(){
-  num = -1; 
+  num = 0; 
   display.innerHTML = "Let's Start";
-  increase.style.backgroundColor = "whitesmoke"
-  decrease.style.backgroundColor = "whitesmoke"
-  display.style.color = "darkblue"
-
+  parent.style.backgroundColor = "bisque"
 }
 
 
@@ -41,7 +34,8 @@ function randomColor(){
   let r = Math.floor(Math.random() * 255);
   let g = Math.floor(Math.random() * 255);
   let b = Math.floor(Math.random() * 255);
-  return (`rgb(${r},${g},${b})`);
+ let a = Math.random();
+  return (`rgba(${r},${g},${b},${a})`);
 }
 
 function doubleClick(){
