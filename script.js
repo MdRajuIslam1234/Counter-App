@@ -6,15 +6,15 @@ let display = document.getElementById("display");
 let increase = document.getElementById("increase");
 let decrease = document.getElementById("decrease");
 let reset = document.getElementById("reset");
+let parent = document.getElementById("parent-div");
 
 //All functions
 
-let num = -1;
+let num = 0;
 function increment(){
  num++;
  display.innerText = num;
- increase.style.backgroundColor = randomColor();
- display.style.color = randomColor()
+ parent.style.backgroundColor = randomColor();
  decrease.style.backgroundColor = "whitesmoke"
  display.style.backgroundColor = "whitesmoke"
 }
@@ -22,8 +22,7 @@ function increment(){
 function decrement(){
   num--;
   display.innerText = num;
-  decrease.style.backgroundColor = randomColor();
- display.style.color = randomColor()
+  parent.style.backgroundColor = randomColor();
  increase.style.backgroundColor = "whitesmoke"
  display.style.backgroundColor = "whitesmoke"
 }
@@ -56,4 +55,5 @@ reset.addEventListener("click", resets)
 
 increase.addEventListener("dblclick", doubleClick);
 decrease.addEventListener("dblclick", doubleClick);
+
 
