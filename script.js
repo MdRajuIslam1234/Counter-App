@@ -15,18 +15,21 @@ function increment(){
  num++;
  display.innerText = num;
  parent.style.backgroundColor = randomColor();
+ display.style.color = "darkgreen";
 }
 
 function decrement(){
   num--;
   display.innerText = num;
   parent.style.backgroundColor = randomColor();
+ display.style.color = "red";
 }
 
 function resets(){
   num = 0; 
   display.innerHTML = "Let's Start";
   parent.style.backgroundColor = "bisque"
+  display.style.color = "darkblue";
 }
 
 
